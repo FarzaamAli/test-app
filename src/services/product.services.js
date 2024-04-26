@@ -36,10 +36,13 @@ export const addProduct = (data) => {
 
 export const getProductById = async (pid) => {
     try {
-        return {
-            name: 'kjkjkjk'
-        }
+        var res = await get(child(dbRef,`products/${pid}`))
+        var data = res.val()
+        //console.log(data)
+        return data
     } catch (error) {
-        console.error('Error', error)
+        console.log(error);
     }
 }
+        
+

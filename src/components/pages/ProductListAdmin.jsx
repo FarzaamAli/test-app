@@ -1,17 +1,30 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect, useState } from "react"
+import { getAllProducts } from "../../services/product.services"
+import ProductCardAdmin from "../product/ProductCardAdmin"
+
+
 
 
 function ProductListAdmin() {
+  const [products, setProducts] = useState(null)
+  useEffect(() => {
+    (async () => {
+      const productsResponse = await getAllProducts()
+      setProducts(productsResponse)
+    })()
+  }, [])
 
-  const { name, price, pid } = props
+  if (!products) return null
 
   return (
-    <div>
-            <h2>{name}</h2>
-            <p>{price}</p>
-            <Link to={`/product/${pid}`}>view</Link>
-        </div>
+    <>
+    <h1>Product Listing</h1>
+    {
+      products.map((product, idx) => {
+        return <ProductCardAdmin {...product} />
+      })
+    }
+  </>
   )
 }
 
