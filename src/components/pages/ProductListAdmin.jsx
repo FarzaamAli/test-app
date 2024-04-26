@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function ProductCard(props) {
+
+function ProductListAdmin() {
+
   const { name, price, pid } = props
 
   return (
@@ -13,4 +15,4 @@ function ProductCard(props) {
   )
 }
 
-export default ProductCard
+export default ProductListAdmin

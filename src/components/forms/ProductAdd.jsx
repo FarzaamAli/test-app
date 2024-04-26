@@ -1,7 +1,12 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { addProduct } from '../../services/product.services'
 
-
+const onSubmit = async (data) => {
+  const addProductResponse = await addProduct(data)
+  reset()
+  alert('Product added successfully')
+}
 
 
 function ProductAdd() {
@@ -16,7 +21,7 @@ function ProductAdd() {
   return (
     <div className=' p-10 m-auto '>
       <div className=' text-center mb-6 font-bold text-2xl'>ADD ITEMS</div>
-       <form >
+       <form onSubmit={handleSubmit(onSubmit)} >
             <label for="name" className=" block mb-2 text-sm font-medium">Name</label>
             <input type='text' placeholder='Enter name of product' className="mb-2 bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5"{...register("name", { required: true })} />
             {errors.name && <span>required</span>}

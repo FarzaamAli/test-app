@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import {db} from '../src/config/firebase.config'
 import './App.css'
-import Header from './components/header/Header'
+import Header from './components/header/UserHeader'
 
 function App() {
   const [count, setCount] = useState(0)

@@ -1,22 +1,16 @@
 
 import { Outlet } from 'react-router-dom'
-import Header from '../../components/header/UserHeader'
+import AdminHeader from '../../components/header/AdminHeader'
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-function Layout() {
-
-
-
-  
-
-
+function adminLayout() {
   return (
     <>
-    <Header/>
-    <Outlet/>
+        <AdminHeader/>
+        <Outlet/>
     </>
   )
 }
 
-export default Layout
+export default adminLayout
