@@ -1,4 +1,4 @@
-import { child, get, push, ref, set } from "firebase/database"
+import { child, get, push, ref, set , remove} from "firebase/database"
 import { db } from "../config/firebase.config"
 import { productEntity } from "../lib/firebase.entities"
 
@@ -44,5 +44,16 @@ export const getProductById = async (pid) => {
         console.log(error);
     }
 }
-        
+    
+export const deleteItem = async (pid) => {
+    try {
+        remove(child(ref(db, '/products'), pid))
+        console.log("remove")
+    } catch (error) {
+        console.log(error);
+    }
+}
+    
+
+
 

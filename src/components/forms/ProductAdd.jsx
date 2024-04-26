@@ -42,6 +42,9 @@ function ProductAdd() {
             {errors.description && <span>required</span>}
             <br />
 
+            {/* <input type='file' placeholder='Quantity of product' className="mb-2 bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5" {...register("qty", { required: true })} /> */}
+
+
             <button type="submit" className="text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 ">Add Item</button>
         </form>
     </div>
