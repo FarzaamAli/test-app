@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import ProductAdd from '../forms/ProductAdd'
 
 function Dashboard() {
   
@@ -24,7 +25,10 @@ function Dashboard() {
     // }
   
     return (
-    <div>Dashboard</div>
+    <>
+      <ProductAdd/>
+    </>
+    
   )
 }
 

@@ -9,8 +9,8 @@ function Login() {
 
         <form onSubmit={handleSubmit(onSubmit)} action="#">
           <div className=''>
-            <label for="first_name" className=" block mb-2 text-sm font-medium">E-mail</label>
-            <input type="text" id="first_name" className=" mb-4 bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="abc@email.com" required {...register('email', {
+            <label for="email" className=" block mb-2 text-sm font-medium">E-mail</label>
+            <input type="email" id="first_name" className=" mb-4 bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="abc@email.com" required {...register('email', {
               required: 'Email is required',
               pattern: {
                 value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,

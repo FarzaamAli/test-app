@@ -4,7 +4,7 @@ import {
     RouterProvider,
 } from "react-router-dom";
 import App from "../../App";
-import Layout from '../../Layout/Layout';
+import Layout from '../../Layout/user/Layout';
 import About from '../pages/About'
 import Product from '../pages/Product'
 import Contact from '../pages/Contact'

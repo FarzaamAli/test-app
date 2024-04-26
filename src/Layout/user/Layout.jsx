@@ -1,6 +1,6 @@
 
 import { Outlet } from 'react-router-dom'
-import Header from '../components/header/Header'
+import Header from '../../components/header/Header'
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
