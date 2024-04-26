@@ -47,13 +47,14 @@ export const getProductById = async (pid) => {
     
 export const deleteItem = async (pid) => {
     try {
-        remove(child(ref(db, '/products'), pid))
-        console.log("remove")
+    //   const productRef = ref(db, 'products/' + pid);
+      await remove(ref(db, 'products/' + pid)).then(()=> {
+        console.log('add');
+      }).catch((error) => console.log(error))
     } catch (error) {
-        console.log(error);
+      console.error('Error deleting product from Firebase:', error);
     }
-}
-    
+  };
 
 
 

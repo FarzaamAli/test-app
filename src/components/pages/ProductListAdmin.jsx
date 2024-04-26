@@ -21,7 +21,7 @@ function ProductListAdmin() {
     <h1>Product Listing</h1>
     {
       products.map((product, idx) => {
-        return <ProductCardAdmin {...product} />
+        return <ProductCardAdmin {...product} key={idx} />
       })
     }
   </>
